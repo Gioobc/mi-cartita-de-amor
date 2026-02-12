@@ -42,21 +42,57 @@ body {
     opacity: 0.8;
 }
 
-.f1 { top: 10%; left: 10%; }
-.f2 { top: 20%; right: 18%; }
-.f3 { bottom: 20%; left: 18%; }
-.f4 { bottom: 10%; right: 10%; }
+/* Contenedores para alinear pares */
+.pair {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: auto;
+}
+
+/* Pares ubicados */
+.p1 { top: 10%; left: 10%; }
+.p2 { top: 10%; right: 10%; }
+.p3 { bottom: 10%; left: 10%; }
+.p4 { bottom: 10%; right: 10%; }
+
+/* Animación suave */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+.pair img {
+    animation: float 6s ease-in-out infinite;
+}
 
 </style>
 </head>
 
 <body>
 
-<!-- Flores y corazones decorativos -->
-<img src="./flor.png" class="decor f1">
-<img src="./corazon.png" class="decor f2">
-<img src="./flor.png" class="decor f3">
-<img src="./corazon.png" class="decor f4">
+<!-- Pares de flores y corazones -->
+<div class="pair p1">
+  <img src="./flor.png" class="decor">
+  <img src="./corazon.png" class="decor">
+</div>
+
+<div class="pair p2">
+  <img src="./flor.png" class="decor">
+  <img src="./corazon.png" class="decor">
+</div>
+
+<div class="pair p3">
+  <img src="./flor.png" class="decor">
+  <img src="./corazon.png" class="decor">
+</div>
+
+<div class="pair p4">
+  <img src="./flor.png" class="decor">
+  <img src="./corazon.png" class="decor">
+</div>
 
 <a href="mi cartita de amor para ti.pdf" download>
     <button class="download-btn">
