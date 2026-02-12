@@ -67,7 +67,31 @@ body {
 .pair img {
     animation: float 6s ease-in-out infinite;
 }
+    
+/* Ajustes para celulares (pantalla ≤ 480px) */
+@media (max-width: 480px) {
+  /* Reducir tamaño de imágenes decorativas */
+  .decor {
+    width: clamp(50px, 15vw, 80px);
+  }
 
+  /* Reducir la separación entre pares y acercarlos al borde */
+  .p1 { top: 6%; left: 6%; }
+  .p2 { top: 6%; right: 6%; }
+  .p3 { bottom: 6%; left: 6%; }
+  .p4 { bottom: 6%; right: 6%; }
+
+  /* Reducir tamaño y padding del botón central */
+  .download-btn {
+    font-size: 16px;
+    padding: 14px 28px;
+  }
+
+  /* Reducir espacio entre flor y corazón */
+  .pair {
+    gap: 6px;
+  }
+}
 </style>
 </head>
 
